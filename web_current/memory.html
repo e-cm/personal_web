@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>ERIC MORGAN</title>
+        <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
+        <link rel="stylesheet" href="css/pills.css">
+        <link rel="stylesheet" href="css/pills.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400" rel="stylesheet">
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/couture" type="text/css"/>
+    </head>
+
+
+
+    <body>
+
+
+        <div id="mountains">
+            <div class="peakWrap"><div class="peaks one"></div></div>
+            <div class="peakWrap"><div class="peaks three"></div></div>
+            <div class="peakWrap"><div class="peaks five"></div></div>
+            <div class="peakWrap"><div class="peaks seven"></div></div>
+            <div class="peakWrap"><div class="peaks eight"></div></div>
+
+            <div class="peakWrap"><div class="peaks topone"></div></div>
+            <div class="peakWrap"><div class="peaks toptwo"></div></div>
+            <div class="peakWrap"><div class="peaks topthree"></div></div>
+            <div class="peakWrap"><div class="peaks topfour"></div></div>
+            <div class="peakWrap"><div class="peaks topfive"></div></div>
+         </div>
+
+        <div id="title">
+            <img id="logo" src="images/emWhite.png" />
+            <div id="nameOuter">
+                <div id="name">ERIC</div>
+                <div id="lastname">MORGAN</div>
+            </div>
+
+            <div id="menu">
+                <a href="."><div class="option port">Portfolio</div><div class="porthill"></div></a>
+                <a href="about.html"><div class="option about">About</div><div class="abouthill"></div></a>
+                <a href="contact.php"><div class="option cont">Contact</div><div class="conthill"></div></a>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="projfeed">
+
+                <div class="projtitle">RESOLUTION</div>
+
+                <video class="titleimage" width="25%" controls muted>
+                    <source src="images/memorymove1.mp4" type="video/mp4">
+                </video>
+
+                <video class="titleimage" width="25%" controls muted>
+                    <source src="images/memorymove2.mp4" type="video/mp4">
+                </video>
+
+
+                <div class="row">
+
+                    <div class="column one-third">
+                        <div class="numberhead">1</div>
+
+                        <p>&nbsp;&nbsp;Data / Memory was a project I took part in with my friend Celeste Pimm in a Programming for Artists class and later exhibited at Le Livart for Habitat Numerik during Nuit Blanche 2017. Our goal was to explore and visualize the parallel between the disintegration of long term human memories and data corruption in the digital world, in an interactive way. We framed this central theme in the context of Celeste's recent falling out with her ex-boyfriend and the process of moving on.</p>
+
+                        <p>&nbsp;&nbsp;The project took the form of in an installation in a small dark room with the only light coming from the projection on the wall and the electric candle the user would hold. The projection was series of pixelized images of events in Celeste’s life during her relationship. These images were constantly and gradually deforming; pixels would drift from their starting positions, causing the images to blur and lose legibility. Additionally, using the candle, users could affect the images themselves. Using three different colour settings, the images could be interacted with in three ways: Scramble the pixels of targeted areas, repair sections of the image, or erase pixels to mix the image with the next one in the series. We liked having the candle be the instrument of interation, representing light in dark times (moving on) and exploration.</p>
+
+
+                        <a target="_blank" href="images/memory1.png">
+                            <img class="pic" src="images/memory1.png">
+                        </a>
+
+                        <a target="_blank" href="images/memory.jpg">
+                            <img class="pic" src="images/memory.jpg">
+                        </a>
+
+                        <a target="_blank" href="images/memory2.jpg">
+                            <img class="pic" src="images/memory2.jpg">
+                        </a>
+
+                    </div>
+
+                    <div class="column one-third">
+                        <div class="numberhead">2</div>
+
+                        <p>&nbsp;&nbsp;The idea was to give the user control over the memories in the same way one might try to control their own memories: sometimes we hopelessly try to preserve them, sometimes we wish we could erase them totally, but neither is ever truly possible. We struggle with true control over our mind; it will distort and mix memories despite our best efforts. Computer memory is nearly flawless by comparison, but when the program runs and users interact with it, the images/files are irreversibly changed.</p>
+
+                        <a target="_blank" href="images/memory3.jpg">
+                            <img class="pic" src="images/memory3.jpg">
+                        </a>
+
+                        <a target="_blank" href="images/memory4.png">
+                            <img class="pic" src="images/memory4.png">
+                        </a>
+                    </div>
+
+                    <div class="column one-third">
+                        <div class="numberhead">3</div>
+
+                        <p>&nbsp;&nbsp;The object of the class was to work with the program Max, a type of visual programming environment that can be used for all kinds of audio, visual, and interactive work. In the case of this project, Max was used to generate audio (also interactive) and capture the position of the electric candle in the room, sending the information to Processing, which was used for the visuals. This was achieved by installing two cameras in the space, one directly in front of the projection, and one aiming down from the ceiling, so that the candle could be tracked in three dimensions. The X and Y coordinates were used for interacting with visuals (like a canvas), while X and Z were used for the audio, which ebbed and flowed depending on position.</p>
+
+                        <p>&nbsp;&nbsp;While Celeste handled all the audio work, the visuals were my job. As previously mentioned, I used Processing for both its simplicity and ability to execute the idea when it came to visuals. The camera feeds ran through Max, where I wrote a program to track certain colours in the feed and send their X and Y coordinates to Processing to apply the effects.</p>
+
+                        <a target="_blank" href="images/memory5.jpg">
+                            <img class="pic" src="images/memory5.jpg">
+                        </a>
+
+                        <a target="_blank" href="images/memory7.png">
+                            <img class="pic" src="images/memory7.png">
+                        </a>
+
+                        <a target="_blank" href="images/memory6.jpg">
+                            <img class="pic" src="images/memory6.jpg">
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
