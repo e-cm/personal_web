@@ -1,0 +1,27 @@
+/* Universal Variables */
+:root{
+	--main-colour: blue;
+}
+
+
+
+/* Universal Styles */
+body {
+
+}
+
+
+/* Mobile Specific Styles */
+@media screen and (max-width: 900px) {
+	body {
+		background-color: var(--main-colour);
+	}	
+}
+
+
+/* Desktop Specific Styles*/
+@media screen and (min-width: 901px) {
+	body {
+		background-color: red;
+	}
+}
