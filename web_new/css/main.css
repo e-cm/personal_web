@@ -1,7 +1,7 @@
 /* * *Universal Variables * * */
+	@import url('https://fontlibrary.org/face/couture');
 
 	:root{
-		--main-colour: blue;
 		--border-TB: 45px;
 		--border-LR: 15px;
 
@@ -11,7 +11,12 @@
 		--nav-width: calc(100% - var(--border-LR) * 4);
 		--nav-height: calc(100% - var(--border-TB) / 4);
 
+		--proj-maxwidth: 600px;
+		--proj-maxfont: 60px;
+
 		--test-nudge: 2px;
+
+		min-width: 320px;
 	}
 
 
@@ -20,6 +25,16 @@
 
 	body {
 		margin: var(--test-nudge);
+		font-family: 'COUTUREBold';
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+	}
+
+	a:visited {
+		color: black;	
 	}
 
 	/* Frame */
@@ -42,8 +57,10 @@
 		top: 0; 
 	}
 	#bottom-border {
-		grid-template-columns: repeat(4, 1fr); 
-		bottom: 0; 
+		grid-template-columns: repeat(5, 1fr); 
+		bottom: 0;
+		font-size: 20px; 
+		line-height: 50px;
 	}
 
 	#left-border, #right-border {
@@ -54,20 +71,30 @@
 	#left-border { left: 0; }
 	#right-border { right: 0; }
 
+	#trim {
+		position: fixed;
+		z-index: 2;
+		top: calc(var(--border-TB));
+		left: calc(var(--border-LR));
+		width: calc(100% - var(--border-LR) * 2 - 8px);
+		height: calc(100% - var(--border-TB) * 2 - 8px);
+		border: 4px solid black;
+	}
+
 	#work {
 		grid-column: 2;
 	}
 
 	#about {
-		grid-column: 3;
+		grid-column: 4;
 	}
 
 
 	/* Within the Frame */
 	#canvas {
-		background-color: green;
 		position: relative;
 		display: grid;
+		color: white;
 
 		top: var(--border-TB);
 		left: var(--border-LR);
@@ -77,51 +104,72 @@
 
 	.project {
 		display: grid;
-		grid-template-columns: repeat(40, 1fr);
-		grid-template-rows: repeat(40, 1fr);
-		border: 2px solid yellow;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(20, 1fr);
+
+		line-height: 100%;
+		/*border: 2px solid yellow;*/
+		justify-self: center;
 	}
 
 	.title {
-		grid-column: 14 / 30;
-		grid-row: 2 / 4;
+		margin-top: 4%;
+		grid-column: 4 / 11;
+		grid-row: 2 / 5;
 	}
 
 	.year {
-		grid-column: 19 / 30;
-		grid-row: 38 / 40;
+		margin-top: 4%;
+		grid-column: 11 / 18;
+		grid-row: 18 / 21;
+		justify-self: right;
 	}
 
 	.thumbnail {
 		width: 100%;
-		grid-column: 3 / 39;
-		grid-row: 3 / 39;
+		grid-column: 3 / 19;
+		grid-row: 3 / 19;
 
 	}
 
 
 /* * * Mobile Specific Styles * * */
 
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 670px) {
 		body {
-			background-color: var(--main-colour);
+			background-color: blue;
 		}
 
 		#canvas {
-			grid-template-columns: repeat(2, 1fr);
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		.project {
+			font-size: 10vw;
 		}	
 	}
 
 
 /* * * Desktop Specific Styles * * */
 
-	@media screen and (min-width: 901px) {
+	@media screen and (min-width: 671px) {
 		body {
 			background-color: red;
 		}
 
 		#canvas {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 		}
 
+		.project {
+			max-width: var(--proj-maxwidth);
+			font-size: 5vw;
+		}
+
+	}
+
+	@media screen and (min-width: 1200px) {
+		.project {
+			font-size: var(--proj-maxfont);
+		}
 	}
