@@ -1,0 +1,42 @@
+	body {
+		background-color: red;
+	}
+
+	#work {
+		color: red;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(20, 1fr);
+
+		line-height: 100%;
+		/*border: 2px solid yellow;*/
+		justify-self: center;
+	}
+
+	.title {
+		margin-top: 4%;
+		grid-column: 4 / 11;
+		grid-row: 2 / 5;
+		z-index: 4;
+	}
+
+	.year {
+		margin-top: 4%;
+		grid-column: 11 / 18;
+		grid-row: 18 / 21;
+		justify-self: right;
+		z-index: 4;
+	}
+
+	.pic_link {
+		grid-column: 3 / 19;
+		grid-row: 3 / 19;
+		z-index: 3;
+	}
+
+	.thumbnail {
+		width: 100%;
+	}

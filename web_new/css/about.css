@@ -1,0 +1,53 @@
+	body {
+		background-color: blue;
+	}
+
+	.icon {
+		width: 100%;
+	}
+
+	#about {
+		color: blue;
+	}
+
+
+	/* Left Side */
+	#headshot {
+		display: grid;
+		grid-template-columns: repeat(20, 1fr);
+		grid-template-rows: repeat(20, 1fr);
+		max-width: 600px;
+	}
+
+	#photo {
+		grid-column: 3 / 19;
+		grid-row: 3 / 19;
+		background-color: red;
+	}
+
+	#links {
+		grid-column: 8 / 18;
+		grid-row: 18 / 20;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		background-color: green;
+		align-items: center;
+	}
+
+	#cv {
+		grid-column: 2;
+	}
+
+	#linkedin {
+		grid-column: 4;
+	}
+
+	#email {
+		grid-column: 6;
+	}
+
+	/* Right Side */
+	#bio {
+		max-width: 600px;
+		padding: 5%;
+	}

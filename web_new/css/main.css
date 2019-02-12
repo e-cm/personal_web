@@ -1,20 +1,22 @@
 /* * *Universal Variables * * */
-	@import url('https://fontlibrary.org/face/couture');
+	/*@import url('https://fontlibrary.org/face/couture');*/
+
+	@font-face {
+		font-family: 'COUTUREBold';
+		src: url(../font/couture-bld.otf);
+	}
 
 	:root{
 		--border-TB: 45px;
 		--border-LR: 15px;
 
-		--logo-width: 30px;
-		--logo-height: 35px;
+		--logo-height: 30px;
 
 		--nav-width: calc(100% - var(--border-LR) * 4);
 		--nav-height: calc(100% - var(--border-TB) / 4);
 
 		--proj-maxwidth: 600px;
 		--proj-maxfont: 60px;
-
-		--test-nudge: 2px;
 
 		min-width: 320px;
 	}
@@ -41,7 +43,7 @@
 	#top-border, #bottom-border, #left-border, #right-border {
 		background-color: white;
 		position: fixed;
-		z-index: 1;
+		z-index: 98;
 	}
 
 	#top-border, #bottom-border {
@@ -72,13 +74,18 @@
 	#right-border { right: 0; }
 
 	#trim {
+		pointer-events: none; /* makes a div able to be clicled through*/
 		position: fixed;
-		z-index: 2;
+		z-index: 99;
 		top: calc(var(--border-TB));
 		left: calc(var(--border-LR));
 		width: calc(100% - var(--border-LR) * 2 - 8px);
 		height: calc(100% - var(--border-TB) * 2 - 8px);
 		border: 4px solid black;
+	}
+
+	#logo {
+		height: var(--logo-height);
 	}
 
 	#work {
@@ -89,75 +96,54 @@
 		grid-column: 4;
 	}
 
-
-	/* Within the Frame */
-	#canvas {
+	/* Within Frame */
+	.canvas {
 		position: relative;
 		display: grid;
 		color: white;
 
 		top: var(--border-TB);
 		left: var(--border-LR);
-		margin-bottom: calc(var(--border-TB) + var(--test-nudge));
+		margin-bottom: var(--border-TB);
 		width: calc(100% - var(--border-LR) * 2);
 	}
-
-	.project {
-		display: grid;
-		grid-template-columns: repeat(20, 1fr);
-		grid-template-rows: repeat(20, 1fr);
-
-		line-height: 100%;
-		/*border: 2px solid yellow;*/
-		justify-self: center;
-	}
-
-	.title {
-		margin-top: 4%;
-		grid-column: 4 / 11;
-		grid-row: 2 / 5;
-	}
-
-	.year {
-		margin-top: 4%;
-		grid-column: 11 / 18;
-		grid-row: 18 / 21;
-		justify-self: right;
-	}
-
-	.thumbnail {
-		width: 100%;
-		grid-column: 3 / 19;
-		grid-row: 3 / 19;
-
-	}
-
+	
 
 /* * * Mobile Specific Styles * * */
 
 	@media screen and (max-width: 670px) {
-		body {
-			background-color: blue;
+
+		#canvas_work {
+			grid-template-columns: repeat(1, 1fr);
 		}
 
-		#canvas {
+		#canvas_about {
 			grid-template-columns: repeat(1, 1fr);
 		}
 
 		.project {
 			font-size: 10vw;
 		}	
+
+		#headshot {
+			grid-row: 2;
+		}
+
+		#bio {
+			grid-row: 1;
+		}
 	}
 
 
 /* * * Desktop Specific Styles * * */
 
 	@media screen and (min-width: 671px) {
-		body {
-			background-color: red;
+
+		#canvas_work {
+			grid-template-columns: repeat(2, 1fr);
 		}
 
-		#canvas {
+		#canvas_about {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
