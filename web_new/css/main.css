@@ -1,5 +1,9 @@
 /* * *Universal Variables * * */
 	/*@import url('https://fontlibrary.org/face/couture');*/
+	@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i|Volkhov:400,400i');
+	/*  font-family: 'Bitter', serif;
+		font-family: 'Volkhov', serif;
+		font-family: 'Josefin Slab', serif;   */
 
 	@font-face {
 		font-family: 'COUTUREBold';
@@ -18,6 +22,8 @@
 		--proj-maxwidth: 600px;
 		--proj-maxfont: 60px;
 
+		--canvas-maxwidth: 1200px;
+
 		min-width: 320px;
 	}
 
@@ -28,11 +34,25 @@
 	body {
 		margin: var(--test-nudge);
 		font-family: 'COUTUREBold';
+
+		overflow-y: scroll;
+    	scrollbar-width: none; /* Firefox */
+    	-ms-overflow-style: none;  /* IE 10+ */
+	}
+
+	body::-webkit-scrollbar { /* WebKit */
+    	width: 0px;
+    	display: hidden;
 	}
 
 	a {
 		text-decoration: none;
 		color: black;
+	}
+
+	a img {
+		width: 100%; /* fit image to container */
+		display: block; /* remove descender space reserved for inline elements like text */
 	}
 
 	a:visited {
@@ -103,10 +123,19 @@
 		color: white;
 
 		top: var(--border-TB);
-		left: var(--border-LR);
-		margin-bottom: var(--border-TB);
+		/* left: var(--border-LR); */
+		margin: 0px auto var(--border-TB);
 		width: calc(100% - var(--border-LR) * 2);
+		max-width: var(--canvas-maxwidth);
 	}
+
+	.title {
+		margin-top: 4%;
+		grid-column: 4 / 11;
+		grid-row: 2 / 5;
+		z-index: 4;
+	}
+
 	
 
 /* * * Mobile Specific Styles * * */
@@ -114,24 +143,29 @@
 	@media screen and (max-width: 670px) {
 
 		#canvas_work {
-			grid-template-columns: repeat(1, 1fr);
+			grid-template-columns: 1fr;
 		}
 
 		#canvas_about {
-			grid-template-columns: repeat(1, 1fr);
+			grid-template-columns: 1fr;
+		}
+
+		#canvas_project {
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr 1fr;
 		}
 
 		.project {
 			font-size: 10vw;
+		}
+
+		#title {
+			font-size: 10vw;
+		}
+
+		#year {
+			font-size: 6vw;
 		}	
-
-		#headshot {
-			grid-row: 2;
-		}
-
-		#bio {
-			grid-row: 1;
-		}
 	}
 
 
@@ -147,9 +181,21 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 
+		#canvas_project {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
 		.project {
 			max-width: var(--proj-maxwidth);
 			font-size: 5vw;
+		}
+
+		#title {
+			font-size: 5vw;
+		}
+
+		#year {
+			font-size: 3vw;
 		}
 
 	}
@@ -157,5 +203,13 @@
 	@media screen and (min-width: 1200px) {
 		.project {
 			font-size: var(--proj-maxfont);
+		}
+
+		#title {
+			font-size: var(--proj-maxfont);
+		}
+
+		#year {
+			font-size: 36px;
 		}
 	}

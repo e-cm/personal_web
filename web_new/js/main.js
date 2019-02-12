@@ -5,11 +5,5 @@ function squareFrame() {
     canvas.style.gridAutoRows = squareWidth + 'px';
 }
 
-function squareHeadshot() {
-	let frame= document.getElementById('headshot');
-	let frameWidth = frame.offsetWidth;
-	frame.style.height = frameWidth;
-}
-
 window.addEventListener('load', squareFrame, false);
 window.addEventListener('resize', squareFrame, false);

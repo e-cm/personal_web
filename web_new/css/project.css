@@ -1,0 +1,57 @@
+	body {
+		background-color: yellow;
+	}
+
+	p {
+		font-family: 'Bitter', serif;
+		font-style: italic;
+	}
+
+	#canvas_project {
+		/*height: calc(100vh - 45px);*/
+		height: 88vh;
+	}
+
+	/* Left Side */
+	#description {
+		margin: 0px 5% 0px;
+		color: black;
+		height: 88vh;
+		overflow-y: auto;
+		scrollbar-width: none; /* Firefox */
+    	-ms-overflow-style: none;  /* IE 10+ */
+	}
+
+	#description::-webkit-scrollbar { /* WebKit */
+    	width: 0px;
+	}
+
+	.spacer {
+		height: 4%;
+	}
+
+	#year {
+		margin-bottom: 25%;
+	}
+
+
+	/* Right Side */
+	#slides {
+		display: grid;
+		grid-template-columns: 1fr;
+		height: 88vh;
+		top: 45px;
+
+		overflow-y: auto;
+		scrollbar-width: none; /* Firefox */
+    	-ms-overflow-style: none;  /* IE 10+ */
+	}
+
+	#slides::-webkit-scrollbar { /* WebKit */
+    	width: 0px;
+	}
+
+	#slides a {
+		margin-top: 0.5%;
+	}
+

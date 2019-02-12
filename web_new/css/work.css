@@ -10,17 +10,9 @@
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
 		grid-template-rows: repeat(20, 1fr);
-
+		max-width: var(--proj-maxwidth);
 		line-height: 100%;
-		/*border: 2px solid yellow;*/
 		justify-self: center;
-	}
-
-	.title {
-		margin-top: 4%;
-		grid-column: 4 / 11;
-		grid-row: 2 / 5;
-		z-index: 4;
 	}
 
 	.year {
@@ -35,8 +27,4 @@
 		grid-column: 3 / 19;
 		grid-row: 3 / 19;
 		z-index: 3;
-	}
-
-	.thumbnail {
-		width: 100%;
 	}
