@@ -5,5 +5,5 @@ function squareFrame() {
     canvas.style.gridAutoRows = squareWidth + 'px';
 }
 
-window.addEventListener('load', squareFrame, false);
-window.addEventListener('resize', squareFrame, false);
+window.addEventListener('load', squareFrame);
+window.addEventListener('resize', squareFrame);

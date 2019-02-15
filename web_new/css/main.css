@@ -35,6 +35,9 @@
 		margin: var(--test-nudge);
 		font-family: 'COUTUREBold';
 
+		-webkit-transition: background-color 0.75s;
+		-moz-transition: background-color 0.75s;
+  		transition: background-color 0.75s;
 		overflow-y: scroll;
     	scrollbar-width: none; /* Firefox */
     	-ms-overflow-style: none;  /* IE 10+ */
@@ -152,11 +155,19 @@
 		display: grid;
 		color: white;
 
+		opacity: 0;
+		-webkit-transition: opacity 0.75s;
+		-moz-transition: opacity 0.75s;
+  		transition: opacity 0.75s;
 		top: var(--border-TB);
 		/* left: var(--border-LR); */
 		margin: 0px auto var(--border-TB);
 		width: calc(100% - var(--border-LR) * 2);
 		max-width: var(--canvas-maxwidth);
+	}
+
+	.canvas.fade {
+	  opacity: 1;
 	}
 
 	.title {

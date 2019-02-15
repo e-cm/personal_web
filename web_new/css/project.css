@@ -1,5 +1,8 @@
 	body {
 		background-color: yellow;
+		-webkit-transition: background-color 1s;
+		-moz-transition: background-color 1s;
+  		transition: background-color 1s;
 	}
 
 	p {
