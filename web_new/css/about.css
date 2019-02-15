@@ -12,34 +12,8 @@
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
 		grid-template-rows: repeat(20, 1fr);
-		max-width: 600px;
+		max-width: 100%;
 		align-self: center;
-	}
-
-	#photo {
-		grid-column: 3 / 19;
-		grid-row: 3 / 19;
-		background-color: red;
-	}
-
-	#links {
-		grid-column: 6 / 16;
-		grid-row: 18 / 20;
-		display: grid;
-		grid-template-columns: repeat(10, 1fr);
-		align-items: center;
-	}
-
-	#cv {
-		grid-column: 2 / 4;
-	}
-
-	#linkedin {
-		grid-column: 5 / 7;
-	}
-
-	#email {
-		grid-column: 8 / 10;
 	}
 
 	/* Right Side */
@@ -49,4 +23,8 @@
 		font-style: italic;
 		max-width: 600px;
 		padding: 5%;
+	}
+
+	#links {
+		margin-top: 10%;
 	}
