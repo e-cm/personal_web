@@ -22,7 +22,6 @@ function colourFade(colour) {
 document.getElementById('work').addEventListener('click', function(event){
 	event.preventDefault();
 	let url = this.href;
-	console.log(url);
 	colourFade('red');
 	setTimeout(function(){ window.location = url; }, 1000);
 	fade();
@@ -31,7 +30,6 @@ document.getElementById('work').addEventListener('click', function(event){
 document.getElementById('about').addEventListener('click', function(event){
 	event.preventDefault();
 	let url = this.href;
-	console.log(url);
 	colourFade('blue');
 	setTimeout(function(){ window.location = url; }, 1000);
 	fade();
@@ -42,7 +40,6 @@ for (let i = 0; i < proj_links.length; i++) {
     proj_links[i].addEventListener('click', function(event){
 		event.preventDefault();
 		let url = this.href;
-		console.log(url);
 		colourFade('yellow');
 		setTimeout(function(){ window.location = url; }, 750);
 		fade();
