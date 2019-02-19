@@ -11,7 +11,7 @@
 	}
 
 	#canvas_project {
-		height: 88vh;
+		height: calc(100% - 2 * 45px);
 	}
 
 	#title {
