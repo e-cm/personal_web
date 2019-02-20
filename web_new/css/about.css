@@ -1,12 +1,12 @@
 	body {
-		background-color: blue;
+		background-color: rgba(25,25,255,1);
 		-webkit-transition: background-color 1s;
 		-moz-transition: background-color 1s;
   		transition: background-color 1s;
 	}
 
 	#about {
-		color: blue;
+		color: rgba(25,25,255,1);
 	}
 
 
@@ -21,7 +21,6 @@
 
 	/* Right Side */
 	#bio {
-		/* font-family: 'Volkhov', serif; */
 		font-family: 'Bitter', serif;
 		font-style: italic;
 		max-width: 600px;

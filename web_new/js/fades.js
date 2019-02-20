@@ -8,13 +8,13 @@ function fade() {
 function colourFade(colour) {
 	let body = document.getElementsByTagName("BODY")[0];
 	if (colour == 'red') {
-		body.style.backgroundColor = 'red';
+		body.style.backgroundColor = 'rgba(255,25,25,1)';
 	}
 	else if (colour == 'blue') {
-		body.style.backgroundColor = 'blue';
+		body.style.backgroundColor = 'rgba(25,25,255,1)';
 	}
 	else if (colour == 'yellow') {
-		body.style.backgroundColor = 'yellow';
+		body.style.backgroundColor = 'rgba(255,255,25,1)';
 	}
 }
 

@@ -1,9 +1,6 @@
 /* * *Universal Variables * * */
 	/*@import url('https://fontlibrary.org/face/couture');*/
 	@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i|Volkhov:400,400i');
-	/*  font-family: 'Bitter', serif;
-		font-family: 'Volkhov', serif;
-		font-family: 'Josefin Slab', serif;   */
 
 	@font-face {
 		font-family: 'COUTUREBold';
@@ -65,10 +62,10 @@
 	#top-border, #bottom-border, #left-border, #right-border {
 		background-color: white;
 		position: fixed;
-		z-index: 98;
 	}
 
 	#top-border, #bottom-border {
+		z-index: 98;
 		display: grid;
 		align-items: center;
 		justify-items: center;
@@ -88,30 +85,22 @@
 	}
 
 	#left-border, #right-border {
+		z-index: 97;
 		top: 0; 
 		bottom: -50%;
 		width: var(--border-LR);
 	}
-	#left-border { left: 0; }
-	#right-border { right: 0; }
+	#left-border { left: 0; border-right: 4px solid black;}
+	#right-border { right: 0; border-left: 4px solid black;}
 
 
-	#trim-top, #trim-bottom, #trim-left, #trim-right {
-		position: fixed;
-	}
 
 	#trim-top, #trim-bottom {
+		position: fixed;
 		z-index: 99;
 		left: var(--border-LR);
 		width: calc(100% - var(--border-LR) * 2);
 		height: var(--border-TB); 
-	}
-
-	#trim-left, #trim-right {
-		z-index: 97;
-		top: 0;
-		width: var(--border-LR);
-		height: 150%;
 	}
 
 	#trim-top {
@@ -125,18 +114,6 @@
 		border-top: 4px solid black;
 	}
 
-	#trim-left {
-		left: 0;
-		border-right: 4px solid black;
-	}
-
-	#trim-right {
-		right: 0;
-		border-left: 4px solid black;
-	}
-
-
-
 	#logo {
 		height: var(--logo-height);
 	}
@@ -148,6 +125,8 @@
 	#about {
 		grid-column: 4;
 	}
+
+
 
 	/* Within Frame */
 	.canvas {
@@ -177,7 +156,7 @@
 		z-index: 4;
 	}
 
-	
+/*******************************************************************/	
 
 /* * * Mobile Specific Styles * * */
 
@@ -190,6 +169,18 @@
 
 		.project {
 			font-size: 10vw;
+		}
+
+		.title.one {
+			text-shadow: 0vw 10vw rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw 20vw rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw -10vw rgba(255,25,25,1);
 		}
 
 		#title {
@@ -281,6 +272,18 @@
 			font-size: 5vw;
 		}
 
+		.title.one {
+			text-shadow: 0vw 5vw rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw 10vw rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw -5vw rgba(255,25,25,1);
+		}
+
 		#title {
 			font-size: 5vw;
 		}
@@ -361,9 +364,12 @@
 		}
 
 		#slides a {
-			margin-bottom: 1%;
-			margin-right: 5%;  
-			/* border-bottom: 4px solid black; */
+			margin-bottom: 4px;
+			margin-right: 4px;  
+		}
+
+		#slides > a:first-child {
+			margin-top: 4px;
 		}
 
 	}
@@ -371,6 +377,18 @@
 	@media screen and (min-width: 1200px) {
 		.project {
 			font-size: var(--proj-maxfont);
+		}
+
+		.title.one {
+			text-shadow: 0vw var(--proj-maxfont) rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw calc(var(--proj-maxfont) * 2) rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw calc(0px - var(--proj-maxfont)) rgba(255,25,25,1);
 		}
 
 		#title {
