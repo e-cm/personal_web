@@ -250,7 +250,7 @@
 			top: 45px;
 		}
 
-		#slides a, #slides video {
+		#slides a {
 			border-top: 4px solid black;
 		}
 
