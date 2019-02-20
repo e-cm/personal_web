@@ -250,7 +250,7 @@
 			top: 45px;
 		}
 
-		#slides a {
+		#slides a, #slides video {
 			border-top: 4px solid black;
 		}
 
@@ -370,10 +370,6 @@
 
 		#slides > a:first-child {
 			margin-top: 4px;
-		}
-
-		#slides video {
-			display: block;
 		}
 
 	}

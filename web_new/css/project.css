@@ -26,4 +26,8 @@
 			height: 4vh;
 	}
 
+	#slides video {
+			display: block;
+	}
+
 
