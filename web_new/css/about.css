@@ -1,16 +1,11 @@
 	body {
 		background-color: rgba(25,25,255,1);
-		-webkit-transition: background-color 1s;
-		-moz-transition: background-color 1s;
-  		transition: background-color 1s;
 	}
 
 	#about {
 		color: rgba(25,25,255,1);
 	}
 
-
-	/* Left Side */
 	#headshot {
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
@@ -19,7 +14,6 @@
 		align-self: center;
 	}
 
-	/* Right Side */
 	#bio {
 		font-family: 'Bitter', serif;
 		font-style: italic;
@@ -29,4 +23,71 @@
 
 	#links {
 		margin-top: 10%;
+	}
+
+/*******************************************************************/
+
+/* * * Mobile-Specific Styles * * */
+
+	@media screen and (max-width: 670px) {
+
+		#links {
+			display: grid;
+			grid-template-columns: repeat(15, 1fr);
+			align-items: center;
+		}
+
+		#headshot {
+			border-bottom: 4px solid black;
+		}
+
+		#photo {
+			grid-column: 1 / 21;
+			grid-row: 1 / 21;
+			background-color: red;
+		}
+
+		#cv {
+			grid-column: 3 / 6;
+		}
+
+		#linkedin {
+			grid-column: 7 / 10;
+		}
+
+		#email {
+			grid-column: 11 / 14;
+		}
+		
+	}
+
+
+/* * * Desktop-Specific Styles * * */
+
+	@media screen and (min-width: 671px) {
+
+		#links {
+			display: grid;
+			grid-template-columns: repeat(7, 1fr);
+			align-items: center;
+		}
+
+		#photo {
+			grid-column: 3 / 19;
+			grid-row: 3 / 19;
+			background-color: red;
+		}
+
+		#cv {
+			grid-column: 3;
+		}
+
+		#linkedin {
+			grid-column: 4;
+		}
+
+		#email {
+			grid-column: 5;
+		}
+
 	}

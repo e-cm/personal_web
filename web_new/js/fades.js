@@ -1,7 +1,6 @@
 // Fade page on load
 function fade() {
-	let canvas = document.getElementsByClassName('canvas')[0];
-	canvas.classList.toggle('fade');
+	document.getElementsByClassName('canvas')[0].classList.toggle('fade');
 }
 
 // Fade colour when changing pages

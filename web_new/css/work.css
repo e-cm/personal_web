@@ -1,8 +1,5 @@
 	body {
 		background-color: rgba(255,25,25,1);
-		-webkit-transition: background-color 1s;
-		-moz-transition: background-color 1s;
-  		transition: background-color 1s;
 	}
 
 	#work {
@@ -31,4 +28,75 @@
 		grid-column: 3 / 19;
 		grid-row: 3 / 19;
 		z-index: 3;
+	}
+
+/*******************************************************************/
+
+/* * * Mobile Specific Styles * * */
+
+	@media screen and (max-width: 670px) {
+
+		.project {
+			font-size: 10vw;
+		}
+
+		.title.one {
+			text-shadow: 0vw 10vw rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw 20vw rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw -10vw rgba(255,25,25,1);
+		}
+
+	}
+
+
+/* * * Desktop Specific Styles * * */
+
+	@media screen and (min-width: 671px) {
+
+		.project {
+			max-width: var(--proj-maxwidth);
+			font-size: 5vw;
+		}
+
+		.title.one {
+			text-shadow: 0vw 5vw rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw 10vw rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw -5vw rgba(255,25,25,1);
+		}
+
+	}
+
+
+/* * * Max Size Styles * * */
+
+	@media screen and (min-width: 1200px) {
+
+		.project {
+			font-size: var(--proj-maxfont);
+		}
+
+		.title.one {
+			text-shadow: 0vw var(--proj-maxfont) rgba(255,25,25,1);
+		}
+
+		.title.two {
+			text-shadow: 0vw calc(var(--proj-maxfont) * 2) rgba(255,25,25,1);
+		}
+
+		.year {
+			text-shadow: 0vw calc(0px - var(--proj-maxfont)) rgba(255,25,25,1);
+		}
+
 	}
