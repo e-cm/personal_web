@@ -138,9 +138,7 @@
 		-webkit-transition: opacity 0.75s;
 		-moz-transition: opacity 0.75s;
   		transition: opacity 0.75s;
-		top: var(--border-TB);
-		/* left: var(--border-LR); */
-		margin: 0px auto var(--border-TB);
+		margin: var(--border-TB) auto var(--border-TB);
 		width: calc(100% - var(--border-LR) * 2);
 		max-width: var(--canvas-maxwidth);
 	}
