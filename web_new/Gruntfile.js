@@ -2,29 +2,17 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 	  concat: {
-	    js_work: {
-	      src: ['js/fades.js', 'js/work.js'],
-	      dest: 'build/js/built_work.js',
-	    },
-	    js_about: {
-	      src: ['js/fades.js', 'js/about.js'],
-	      dest: 'build/js/built_about.js',
-	    },
-	    js_project: {
-	      src: ['js/fades.js', 'js/lightbox-plus-jquery.js'],
-	      dest: 'build/js/built_project.js',
-	    },
 	    es5_work: {
 	      src: ['es5/fades.js', 'es5/work.js'],
 	      dest: 'build/es5/built_work.js',
 	    },
 	    es5_about: {
 	      src: ['es5/fades.js', 'es5/about.js'],
-	      dest: 'build/js/built_about.js',
+	      dest: 'build/es5/built_about.js',
 	    },
 	    es5_project: {
-	      src: ['es5/fades.js', 'es5/lightbox-plus-jquery.js'],
-	      dest: 'build/js/built_project.js',
+	      src: ['es5/fades.js', 'js/lightbox-plus-jquery.js'],
+	      dest: 'build/es5/built_project.js',
 	    },
 	    css_work: {
 	      src: ['css/main.css', 'css/work.css'],
