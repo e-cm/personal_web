@@ -103,6 +103,10 @@
 			text-shadow: 0vw calc(var(--proj-maxfont) * 2) rgba(255,25,25,1);
 		}
 
+		.title.three {
+			text-shadow: 0vw calc(var(--proj-maxfont) * 3) rgba(255,25,25,1);
+		}
+
 		.year {
 			text-shadow: 0vw calc(0px - var(--proj-maxfont)) rgba(255,25,25,1);
 		}
