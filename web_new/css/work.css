@@ -48,6 +48,10 @@
 			text-shadow: 0vw 20vw rgba(255,25,25,1);
 		}
 
+		.title.three {
+			text-shadow: 0vw 30vw rgba(255,25,25,1);
+		}
+
 		.year {
 			text-shadow: 0vw -10vw rgba(255,25,25,1);
 		}
@@ -70,6 +74,10 @@
 
 		.title.two {
 			text-shadow: 0vw 10vw rgba(255,25,25,1);
+		}
+
+		.title.three {
+			text-shadow: 0vw 15vw rgba(255,25,25,1);
 		}
 
 		.year {

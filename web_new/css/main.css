@@ -1,5 +1,4 @@
 /* * *Universal Variables * * */
-	/*@import url('https://fontlibrary.org/face/couture');*/
 	@import url('https://fonts.googleapis.com/css?family=Bitter:400,400i|Volkhov:400,400i');
 
 	@font-face {
@@ -148,8 +147,8 @@
 	}
 
 	.title {
-		margin-top: 4%;
-		grid-column: 4 / 11;
+		margin-top: 3%;
+		grid-column: 4 / 16;
 		grid-row: 2 / 5;
 		z-index: 4;
 	}
