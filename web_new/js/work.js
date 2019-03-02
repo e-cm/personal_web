@@ -1,9 +1,0 @@
-// Makes each project frame a square
-function squareFrame() {
-	let canvas = document.getElementById('canvas_work');
-    let squareWidth = document.getElementsByClassName('project')[0].offsetWidth;
-    canvas.style.gridAutoRows = squareWidth + 'px';
-}
-
-window.addEventListener('load', squareFrame);
-window.addEventListener('resize', squareFrame);

@@ -117,8 +117,15 @@
 		height: var(--logo-height);
 	}
 
+	#work, #about {
+		-webkit-transition: color 1s;
+		-moz-transition: color 1s;
+  		transition: color 1s;
+	}
+
 	#work {
 		grid-column: 2;
+
 	}
 
 	#about {

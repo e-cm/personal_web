@@ -5,10 +5,48 @@ var page = {
 		fade();
 		square();
 		window.addEventListener('resize', square);
-	}
 
-	// Fade page on load
-};function fade() {
+		// Fade into the colour of the page you're going to
+		document.getElementById('work').addEventListener('click', function (event) {
+			event.preventDefault();
+			var url = this.href;
+			colourFade('red');
+			setTimeout(function () {
+				window.location = url;
+			}, 1000);
+			fade();
+		});
+
+		document.getElementById('about').addEventListener('click', function (e) {
+			fadeTo('blue', this.href, e);
+		});
+
+		var proj_links = document.getElementsByClassName('pic_link');
+		for (var i = 0; i < proj_links.length; i++) {
+			proj_links[i].addEventListener('click', function (event) {
+				event.preventDefault();
+				var url = this.href;
+				colourFade('yellow');
+				setTimeout(function () {
+					window.location = url;
+				}, 1000);
+				fade();
+			});
+		}
+	}
+};
+
+function fadeTo(colour, url, event) {
+	event.preventDefault();
+	colourFade('blue');
+	setTimeout(function () {
+		window.location = url;
+	}, 1000);
+	fade();
+}
+
+// Fade page on load
+function fade() {
 	document.getElementsByClassName('canvas')[0].classList.toggle('fade');
 }
 
@@ -54,40 +92,6 @@ function squareFrame() {
 	var canvas = document.getElementById('canvas_work');
 	var squareWidth = document.getElementsByClassName('project')[0].offsetWidth;
 	canvas.style.gridAutoRows = squareWidth + 'px';
-}
-
-// Fade into the colour of the page you're going to
-document.getElementById('work').addEventListener('click', function (event) {
-	event.preventDefault();
-	var url = this.href;
-	colourFade('red');
-	setTimeout(function () {
-		window.location = url;
-	}, 1000);
-	fade();
-});
-
-document.getElementById('about').addEventListener('click', function (event) {
-	event.preventDefault();
-	var url = this.href;
-	colourFade('blue');
-	setTimeout(function () {
-		window.location = url;
-	}, 1000);
-	fade();
-});
-
-var proj_links = document.getElementsByClassName('pic_link');
-for (var i = 0; i < proj_links.length; i++) {
-	proj_links[i].addEventListener('click', function (event) {
-		event.preventDefault();
-		var url = this.href;
-		colourFade('yellow');
-		setTimeout(function () {
-			window.location = url;
-		}, 1000);
-		fade();
-	});
 }
 
 window.addEventListener('load', page.init);

@@ -40,20 +40,12 @@
 			font-size: 10vw;
 		}
 
-		.title.one {
-			text-shadow: 0vw 10vw rgba(255,25,25,1);
-		}
-
-		.title.two {
-			text-shadow: 0vw 20vw rgba(255,25,25,1);
-		}
-
-		.title.three {
-			text-shadow: 0vw 30vw rgba(255,25,25,1);
+		.title {
+			text-shadow: -0.6vw 0.8vw rgba(255,25,25,1);
 		}
 
 		.year {
-			text-shadow: 0vw -10vw rgba(255,25,25,1);
+			text-shadow: 0.6vw -0.8vw rgba(255,25,25,1);
 		}
 
 	}
@@ -68,20 +60,12 @@
 			font-size: 5vw;
 		}
 
-		.title.one {
-			text-shadow: 0vw 5vw rgba(255,25,25,1);
-		}
-
-		.title.two {
-			text-shadow: 0vw 10vw rgba(255,25,25,1);
-		}
-
-		.title.three {
-			text-shadow: 0vw 15vw rgba(255,25,25,1);
+		.title {
+			text-shadow: -0.3vw 0.4vw rgba(255,25,25,1);
 		}
 
 		.year {
-			text-shadow: 0vw -5vw rgba(255,25,25,1);
+			text-shadow: 0.3vw -0.4vw rgba(255,25,25,1);
 		}
 
 	}
@@ -95,20 +79,12 @@
 			font-size: var(--proj-maxfont);
 		}
 
-		.title.one {
-			text-shadow: 0vw var(--proj-maxfont) rgba(255,25,25,1);
-		}
-
-		.title.two {
-			text-shadow: 0vw calc(var(--proj-maxfont) * 2) rgba(255,25,25,1);
-		}
-
-		.title.three {
-			text-shadow: 0vw calc(var(--proj-maxfont) * 3) rgba(255,25,25,1);
+		.title {
+			text-shadow: -3.6px 4.8px rgba(255,25,25,1);
 		}
 
 		.year {
-			text-shadow: 0vw calc(0px - var(--proj-maxfont)) rgba(255,25,25,1);
+			text-shadow: 3.6px -4.8px rgba(255,25,25,1);
 		}
 
 	}
