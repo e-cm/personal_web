@@ -57,6 +57,10 @@
 		color: black;	
 	}
 
+	a:hover {
+		text-decoration: underline;
+	}
+
 	/* Frame */
 	#top-border, #bottom-border, #left-border, #right-border {
 		background-color: white;
@@ -77,10 +81,17 @@
 		top: 0; 
 	}
 	#bottom-border {
-		grid-template-columns: repeat(5, 1fr); 
+		grid-template-columns: 1fr; 
 		bottom: 0;
 		font-size: 20px; 
 		line-height: 50px;
+	}
+	#inner-border {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		justify-items: center; 
+		width: calc(100vw - 30px);
 	}
 
 	#left-border, #right-border {
@@ -123,16 +134,6 @@
   		transition: color 1s;
 	}
 
-	#work {
-		grid-column: 2;
-
-	}
-
-	#about {
-		grid-column: 4;
-	}
-
-
 
 	/* Within Frame */
 	.canvas {
@@ -172,6 +173,17 @@
 
 		.canvas {
 			grid-template-columns: 1fr 1fr;
+		}
+
+	}
+
+
+/* * * Max Size Styles * * */
+
+	@media screen and (min-width: 1200px) {
+
+		#inner-border {
+			width: 1200px;
 		}
 
 	}

@@ -19,8 +19,10 @@
 				<img id="logo" src="media/EM_logo_black.png">
 			</div>
 			<div id="bottom-border">
-				<a href="work.html" id="work">WORK</a>
-				<a href="about.html" id="about">ABOUT</a>
+				<div id="inner-border">
+					<a href="work.html" id="work">WORK</a>
+					<a href="about.html" id="about">ABOUT</a>
+				</div>
 			</div>
 			<div id="left-border"></div>
 			<div id="right-border"></div>
@@ -31,11 +33,16 @@
 				<div class="spacer"></div>
 				<div id="title">RESOLUTION</div>
 				<div id="year">2016</div>
-				<p>Meat heaven have. Can&#39;t years, for also morning very waters. So, fourth living male years Spirit were. Seed, signs, good of herb she&#39;d dominion divided saw seasons all fruit. Which place waters i male a for itself light likeness open whose, man after together. Meat. Fly.</p>
+				<p>Resolution was a project I took part in with my friend Celeste Pimm in a Programming for Artists class and later exhibited at Le Livart for Habitat Numerik during Nuit Blanche 2017. Our goal was to explore and visualize the parallel between the disintegration of long term human memories and data corruption in the digital world, in an interactive way. We framed this central theme in the context of Celeste's recent falling out with her ex-boyfriend and the process of moving on.</p>
 
-				<p>Light shall land light creeping. First lesser sea itself, moveth subdue under. Moveth fish every rule. Were man. God were together. Set. Greater i were were Sea fifth yielding, whose unto. Female Don&#39;t land green creeping had had us whose above of also. Years, divided can&#39;t had under. Seed open fruitful dry shall given yielding beast hath moved fish seed greater him herb fruit saw heaven be fly herb was in she&#39;d Day. Every dry. Subdue deep forth every, she&#39;d. Make, saw moved beginning open life darkness grass.</p>
+                <p>The project took the form of in an installation in a small dark room with the only light coming from the projection on the wall and the electric candle the user would hold. The projection was series of pixelized images of events in Celeste’s life during her relationship. These images were constantly and gradually deforming; pixels would drift from their starting positions, causing the images to blur and lose legibility. Additionally, using the candle, users could affect the images themselves. Using three different colour settings, the images could be interacted with in three ways: Scramble the pixels of targeted areas, repair sections of the image, or erase pixels to mix the image with the next one in the series. We liked having the candle be the instrument of interaction, representing light in dark times (moving on) and exploration.</p>
 
-				<p>Days have he fish subdue gathering. Without third and lesser rule made fruit under the good firmament midst give creature. God first bearing form moved be evening i all Over beginning moveth. Yielding third meat second lights, gathering. Spirit were waters blessed beast isn&#39;t first two light green very was wherein one after dominion together day dry them Multiply male moved and, itself without don&#39;t beast.</p>
+                <p>The idea was to give the user control over the memories in the same way one might try to control their own memories: sometimes we hopelessly try to preserve them, sometimes we wish we could erase them totally, but neither is ever truly possible. We struggle with true control over our mind; it will distort and mix memories despite our best efforts. Computer memory is nearly flawless by comparison, but when the program runs and users interact with it, the images/files are irreversibly changed.</p>
+
+                <p>The object of the class was to work with the program Max, a type of visual programming environment that can be used for all kinds of audio, visual, and interactive work. In the case of this project, Max was used to generate audio (also interactive) and capture the position of the electric candle in the room, sending the information to Processing, which was used for the visuals. This was achieved by installing two cameras in the space, one directly in front of the projection, and one aiming down from the ceiling, so that the candle could be tracked in three dimensions. The X and Y coordinates were used for interacting with visuals (like a canvas), while X and Z were used for the audio, which ebbed and flowed depending on position.</p>
+
+                <p>While Celeste handled all the audio work, the visuals were my job. As previously mentioned, I used Processing for both its simplicity and ability to execute the idea when it came to visuals. The camera feeds ran through Max, where I wrote a program to track certain colours in the feed and send their X and Y coordinates to Processing to apply the effects.</p>
+
 				<div class="spacer"></div>
 
 			</div>
