@@ -15,6 +15,13 @@
 		justify-self: center;
 	}
 
+	.title {
+		margin-top: 3%;
+		grid-column: 4 / 16;
+		grid-row: 2 / 5;
+		z-index: 4;
+	}
+
 
 	.year {
 		margin-top: 4%;

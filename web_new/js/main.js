@@ -62,7 +62,7 @@ function colourFade(colour) {
 // keep relevent grid objects square
 function squareRatio() {
 	let target;
-
+	
 	if (eval(target = document.getElementById('headshot'))) {
 		squareHeadshot();
 	}
