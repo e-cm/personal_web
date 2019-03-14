@@ -16,6 +16,7 @@
 	}
 
 	.title {
+		pointer-events: none;
 		margin-top: 3%;
 		grid-column: 4 / 16;
 		grid-row: 2 / 5;
@@ -31,7 +32,7 @@
 		z-index: 4;
 	}
 
-	.pic_link {
+	.pic_link, .pic_link_direct {
 		grid-column: 3 / 19;
 		grid-row: 3 / 19;
 		z-index: 3;
