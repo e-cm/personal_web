@@ -15,15 +15,17 @@
 	}
 
 	#bio {
-		font-family: 'Bitter', serif;
+		font-family: 'Source Sans Pro', sans-serif; 
 		font-style: italic;
 		max-width: 600px;
-		padding: 5%;
+		padding: 0px 5%;
 	}
 
-	#links {
-		margin-top: 10%;
+	#links a {
+		margin: 0px 5px;
+		color: white;
 	}
+
 
 /*******************************************************************/
 
@@ -31,32 +33,17 @@
 
 	@media screen and (max-width: 670px) {
 
-		#links {
-			display: grid;
-			grid-template-columns: repeat(15, 1fr);
-			align-items: center;
-		}
-
-		#headshot {
+		#photo img {
 			border-bottom: 4px solid black;
 		}
 
 		#photo {
 			grid-column: 1 / 21;
 			grid-row: 1 / 21;
-			background-color: red;
 		}
 
-		#cv {
-			grid-column: 3 / 6;
-		}
-
-		#linkedin {
-			grid-column: 7 / 10;
-		}
-
-		#email {
-			grid-column: 11 / 14;
+		#text {
+			margin-top: 5%;
 		}
 		
 	}
@@ -66,28 +53,23 @@
 
 	@media screen and (min-width: 671px) {
 
-		#links {
-			display: grid;
-			grid-template-columns: repeat(7, 1fr);
-			align-items: center;
+		.canvas {
+			height: calc(100vh - 90px);
+		}
+
+		#bio {
+			display: table;
+			height: calc(100vh - 90px);
+		}
+
+		#inner_bio {
+			display: table-cell;
+			vertical-align: middle;
 		}
 
 		#photo {
 			grid-column: 3 / 19;
 			grid-row: 3 / 19;
-			background-color: red;
-		}
-
-		#cv {
-			grid-column: 3;
-		}
-
-		#linkedin {
-			grid-column: 4;
-		}
-
-		#email {
-			grid-column: 5;
 		}
 
 	}

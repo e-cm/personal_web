@@ -7,7 +7,7 @@ function init() {
 	window.addEventListener('resize', squareRatio);
 
 	// Fade into the colour of the page you're going to
-	document.getElementById('work').addEventListener('click', function(event){
+	document.getElementById('work').addEventListener('click', function(e){
 		fadeOnExit('red', this.href, e);
 	});
 
@@ -17,7 +17,7 @@ function init() {
 
 	let proj_links = document.getElementsByClassName('pic_link');
 	for (let i = 0; i < proj_links.length; i++) {
-	    proj_links[i].addEventListener('click', function(event){
+	    proj_links[i].addEventListener('click', function(e){
 			fadeOnExit('yellow', this.href, e);
 		});
 	}
@@ -27,7 +27,7 @@ function init() {
 function fadeOnExit(colour, url, event) {
 	event.preventDefault();
 	colourFade(colour);
-	setTimeout(function(){ window.location = url; }, 1000);
+	setTimeout(function(){ window.location = url; }, 500);
 	toggleFade();
 }
 

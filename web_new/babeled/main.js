@@ -1,52 +1,42 @@
 'use strict';
 
-var page = {
-	init: function init() {
-		fade();
-		square();
-		window.addEventListener('resize', square);
+/* * * Functions * * */
 
-		// Fade into the colour of the page you're going to
-		document.getElementById('work').addEventListener('click', function (event) {
-			event.preventDefault();
-			var url = this.href;
-			colourFade('red');
-			setTimeout(function () {
-				window.location = url;
-			}, 1000);
-			fade();
+// perform CSS-alterations and initialize listeners
+function init() {
+	toggleFade();
+	squareRatio();
+	window.addEventListener('resize', squareRatio);
+
+	// Fade into the colour of the page you're going to
+	document.getElementById('work').addEventListener('click', function (e) {
+		fadeOnExit('red', this.href, e);
+	});
+
+	document.getElementById('about').addEventListener('click', function (e) {
+		fadeOnExit('blue', this.href, e);
+	});
+
+	var proj_links = document.getElementsByClassName('pic_link');
+	for (var i = 0; i < proj_links.length; i++) {
+		proj_links[i].addEventListener('click', function (e) {
+			fadeOnExit('yellow', this.href, e);
 		});
-
-		document.getElementById('about').addEventListener('click', function (e) {
-			fadeTo('blue', this.href, e);
-		});
-
-		var proj_links = document.getElementsByClassName('pic_link');
-		for (var i = 0; i < proj_links.length; i++) {
-			proj_links[i].addEventListener('click', function (event) {
-				event.preventDefault();
-				var url = this.href;
-				colourFade('yellow');
-				setTimeout(function () {
-					window.location = url;
-				}, 1000);
-				fade();
-			});
-		}
 	}
-};
-
-function fadeTo(colour, url, event) {
-	event.preventDefault();
-	colourFade('blue');
-	setTimeout(function () {
-		window.location = url;
-	}, 1000);
-	fade();
 }
 
-// Fade page on load
-function fade() {
+// fade-out on page switch
+function fadeOnExit(colour, url, event) {
+	event.preventDefault();
+	colourFade(colour);
+	setTimeout(function () {
+		window.location = url;
+	}, 500);
+	toggleFade();
+}
+
+// Fade into page on load
+function toggleFade() {
 	document.getElementsByClassName('canvas')[0].classList.toggle('fade');
 }
 
@@ -71,27 +61,29 @@ function colourFade(colour) {
 	}
 }
 
-// keep relevent grids square
-function square() {
-	var exists;
+// keep relevent grid objects square
+function squareRatio() {
+	var target = void 0;
 
-	if (eval(exists = document.getElementById('headshot'))) {
+	if (eval(target = document.getElementById('headshot'))) {
 		squareHeadshot();
-	} else if (eval(exists = document.getElementById('canvas_work'))) {
-		squareFrame();
+	} else if (eval(target = document.getElementById('canvas_work'))) {
+		squareProject();
 	}
 }
 
 function squareHeadshot() {
-	var frame = document.getElementById('headshot');
-	var frameWidth = frame.offsetWidth;
-	frame.style.height = frameWidth + 'px';
+	var headshot = document.getElementById('headshot');
+	var headshotWidth = headshot.offsetWidth;
+	headshot.style.height = headshotWidth + 'px';
 }
 
-function squareFrame() {
+function squareProject() {
 	var canvas = document.getElementById('canvas_work');
-	var squareWidth = document.getElementsByClassName('project')[0].offsetWidth;
-	canvas.style.gridAutoRows = squareWidth + 'px';
+	var projectWidth = document.getElementsByClassName('project')[0].offsetWidth;
+	canvas.style.gridAutoRows = projectWidth + 'px';
 }
 
-window.addEventListener('load', page.init);
+/* * * Main * * */
+
+window.addEventListener('load', init);
