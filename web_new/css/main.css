@@ -141,6 +141,10 @@
 		height: 4vh;
 	}
 
+	.spacer.large {
+		height: 8vh;
+	}
+
 	a {
 		text-decoration: none;
 		color: black;
@@ -156,7 +160,7 @@
 	}
 
 	#text {
-		margin-bottom: 4vh;
+		margin-bottom: 8vh;
 	}
 
 	.underline.black {
