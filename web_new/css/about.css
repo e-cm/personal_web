@@ -21,6 +21,10 @@
 		padding: 0px 5%;
 	}
 
+	#links {
+		margin-bottom: 0vh;
+	}
+
 	#links a {
 		margin: 0px 5px;
 		color: white;

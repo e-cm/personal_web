@@ -2,7 +2,7 @@
 
 /* * * Functions * * */
 
-// perform CSS-alterations and initialize listeners
+// Perform CSS-alterations and initialize listeners
 function init() {
 	toggleFade();
 	squareRatio();
@@ -17,6 +17,7 @@ function init() {
 		fadeOnExit('blue', this.href, e);
 	});
 
+	// If you're on the main page, add listener to each project link
 	var proj_links = document.getElementsByClassName('pic_link');
 	for (var i = 0; i < proj_links.length; i++) {
 		proj_links[i].addEventListener('click', function (e) {
@@ -25,7 +26,7 @@ function init() {
 	}
 }
 
-// fade-out on page switch
+// Fade-out on page switch
 function fadeOnExit(colour, url, event) {
 	event.preventDefault();
 	colourFade(colour);
@@ -61,25 +62,23 @@ function colourFade(colour) {
 	}
 }
 
-// keep relevent grid objects square
+// Keep relevent grid objects square on the main page and about page
 function squareRatio() {
 	var target = void 0;
 
 	if (eval(target = document.getElementById('headshot'))) {
-		squareHeadshot();
+		squareHeadshot(target);
 	} else if (eval(target = document.getElementById('canvas_work'))) {
-		squareProject();
+		squareProject(target);
 	}
 }
 
-function squareHeadshot() {
-	var headshot = document.getElementById('headshot');
+function squareHeadshot(headshot) {
 	var headshotWidth = headshot.offsetWidth;
 	headshot.style.height = headshotWidth + 'px';
 }
 
-function squareProject() {
-	var canvas = document.getElementById('canvas_work');
+function squareProject(canvas) {
 	var projectWidth = document.getElementsByClassName('project')[0].offsetWidth;
 	canvas.style.gridAutoRows = projectWidth + 'px';
 }

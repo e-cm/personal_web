@@ -7,10 +7,6 @@
 		font-style: italic;
 	}
 
-	#canvas_project {
-		height: calc(100% - 2 * 45px);
-	}
-
 	#title {
 		line-height: 100%;
 	}
@@ -88,10 +84,6 @@
 /* * * Desktop Specific Styles * * */
 
 	@media screen and (min-width: 671px) {
-
-		.canvas {
-			grid-template-columns: 1fr 1fr;
-		}
 
 		#description {
 			margin: 0px 5% 0px;
