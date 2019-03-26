@@ -1,9 +1,9 @@
 	body {
-		background-color: rgba(25,25,255,1);
+		background-color: rgba(25,25,175,1);
 	}
 
 	#about {
-		color: rgba(25,25,255,1);
+		color: rgba(25,25,175,1);
 	}
 
 	#headshot {
@@ -19,10 +19,6 @@
 		font-style: italic;
 		max-width: 600px;
 		padding: 0px 5%;
-	}
-
-	#links {
-		margin-bottom: 0vh;
 	}
 
 	#links a {
@@ -69,6 +65,10 @@
 		#inner_bio {
 			display: table-cell;
 			vertical-align: middle;
+		}
+
+		#links {
+			margin-bottom: 0vh;
 		}
 
 		#photo {

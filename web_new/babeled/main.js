@@ -1,5 +1,10 @@
 'use strict';
 
+/* * * Colours * * */
+var red = 'rgba(225,25,25,1)';
+var blue = 'rgba(25,25,175,1)';
+var yellow = 'rgba(255,255,75,1)';
+
 /* * * Functions * * */
 
 // Perform CSS-alterations and initialize listeners
@@ -48,17 +53,17 @@ function colourFade(colour) {
 	var about_link = document.getElementById('about');
 
 	if (colour == 'red') {
-		work_link.style.color = 'rgba(255,25,25,1)';
+		work_link.style.color = red;
 		about_link.style.color = 'black';
-		body.style.backgroundColor = 'rgba(255,25,25,1)';
+		body.style.backgroundColor = red;
 	} else if (colour == 'blue') {
 		work_link.style.color = 'black';
-		about_link.style.color = 'rgba(25,25,255,1)';
-		body.style.backgroundColor = 'rgba(25,25,255,1)';
+		about_link.style.color = blue;
+		body.style.backgroundColor = blue;
 	} else if (colour == 'yellow') {
 		work_link.style.color = 'black';
 		about_link.style.color = 'black';
-		body.style.backgroundColor = 'rgba(255,255,25,1)';
+		body.style.backgroundColor = yellow;
 	}
 }
 
