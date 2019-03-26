@@ -1,9 +1,9 @@
 	body {
-		background-color: rgba(225,25,25,1);
+		background-color: rgba(255,75,75,1);
 	}
 
 	#work {
-		color: rgba(225,25,25,1);
+		color: rgba(275,75,75,1);
 	}
 
 	.project {
@@ -49,11 +49,11 @@
 		}
 
 		.title {
-			text-shadow: -0.6vw 0.8vw rgba(225,25,25,1);
+			text-shadow: -0.6vw 0.8vw rgba(255,75,75,1);
 		}
 
 		.year {
-			text-shadow: 0.6vw -0.8vw rgba(225,25,25,1);
+			text-shadow: 0.6vw -0.8vw rgba(275,75,75,1);
 		}
 
 	}
@@ -69,11 +69,11 @@
 		}
 
 		.title {
-			text-shadow: -0.3vw 0.4vw rgba(225,25,25,1);
+			text-shadow: -0.3vw 0.4vw rgba(255,75,75,1);
 		}
 
 		.year {
-			text-shadow: 0.3vw -0.4vw rgba(225,25,25,1);
+			text-shadow: 0.3vw -0.4vw rgba(255,75,75,1);
 		}
 
 	}
@@ -88,11 +88,11 @@
 		}
 
 		.title {
-			text-shadow: -3.6px 4.8px rgba(225,25,25,1);
+			text-shadow: -3.6px 4.8px rgba(255,75,75,1);
 		}
 
 		.year {
-			text-shadow: 3.6px -4.8px rgba(225,25,25,1);
+			text-shadow: 3.6px -4.8px rgba(255,75,75,1);
 		}
 
 	}

@@ -1,6 +1,6 @@
 /* * * Colours * * */
-let red = 'rgba(225,25,25,1)';
-let blue = 'rgba(25,25,175,1)';
+let red = 'rgba(255,75,75,1)';
+let blue = 'rgba(75,75,255,1)';
 let yellow = 'rgba(255,255,75,1)';
 
 

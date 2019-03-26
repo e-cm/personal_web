@@ -1,8 +1,8 @@
 'use strict';
 
 /* * * Colours * * */
-var red = 'rgba(225,25,25,1)';
-var blue = 'rgba(25,25,175,1)';
+var red = 'rgba(255,75,75,1)';
+var blue = 'rgba(75,75,255,1)';
 var yellow = 'rgba(255,255,75,1)';
 
 /* * * Functions * * */
