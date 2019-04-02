@@ -4,9 +4,9 @@ module.exports = function(grunt) {
 	  uglify: {
 	    build: {
 	      files: {
-	        'min/js/work.min.js': ['babeled/main.js'],
+	        'min/js/work.min.js': ['babeled/main.js', 'babeled/scroll.js'],
 	        'min/js/about.min.js': ['babeled/main.js'],
-	        'min/js/project.min.js': ['babeled/main.js', 'js/lightbox-plus-jquery.js'], 
+	        'min/js/project.min.js': ['babeled/main.js', 'babeled/scroll.js', 'js/lightbox-plus-jquery.js'], 
 	      }
 	    }
 	  },
