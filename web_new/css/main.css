@@ -91,13 +91,13 @@
 	#left-scroll, #right-scroll {
 		background-color: black;
 		position: fixed;
-		z-index: 98;
-		top: calc(var(--border-TB) + 14px); 
-		width: 10px;
-		height: 0px;
+		z-index: 100;
+		top: 21px; 
+		width: 0px;
+		height: 4px;
 	}
-	#left-scroll { left: 12px; }
-	#right-scroll { right: 12px; }
+	#left-scroll { right: calc(50vw + 25px); }
+	#right-scroll { left: calc(50vw + 25px); }
 
 
 
@@ -145,12 +145,21 @@
 		-moz-transition: opacity 0.5s;
   		transition: opacity 0.5s;
 		margin: var(--border-TB) auto var(--border-TB);
+		height: calc(100vh - 90px);
 		width: calc(100% - var(--border-LR) * 2);
 		max-width: var(--canvas-maxwidth);
+
+		overflow-y: auto;
+		scrollbar-width: none; /* Firefox */
+	    -ms-overflow-style: none;  /* IE 10+ */
 	}
 
 	.canvas.fade {
 	  opacity: 0;
+	}
+
+	.canvas::-webkit-scrollbar { /* WebKit */
+	    width: 0px;
 	}
 
 	.spacer {

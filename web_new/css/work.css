@@ -6,17 +6,6 @@
 		color: rgba(275,75,75,1);
 	}
 
-	#canvas_work {
-		height: calc(100vh - 90px);
-		overflow-y: auto;
-		scrollbar-width: none; /* Firefox */
-	    -ms-overflow-style: none;  /* IE 10+ */
-	}
-
-	#canvas_work::-webkit-scrollbar { /* WebKit */
-	    width: 0px;
-	}
-
 	.project {
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
