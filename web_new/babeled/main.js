@@ -24,10 +24,25 @@ function init() {
 
 	// If you're on the main page, add listener to each project link
 	var proj_links = document.getElementsByClassName('pic_link');
-	for (var i = 0; i < proj_links.length; i++) {
+
+	var _loop = function _loop(i) {
 		proj_links[i].addEventListener('click', function (e) {
 			fadeOnExit('yellow', this.href, e);
 		});
+
+		proj_links[i].addEventListener('mouseenter', function (e) {
+			proj_links[i].children[0].style.display = 'none';
+			proj_links[i].children[1].style.display = 'block';
+		});
+
+		proj_links[i].addEventListener('mouseleave', function (e) {
+			proj_links[i].children[0].style.display = 'block';
+			proj_links[i].children[1].style.display = 'none';
+		});
+	};
+
+	for (var i = 0; i < proj_links.length; i++) {
+		_loop(i);
 	}
 }
 
