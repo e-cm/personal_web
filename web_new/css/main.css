@@ -180,6 +180,10 @@
 		display: block; /* remove descender space reserved for inline elements like text */
 	}
 
+	.gif {
+		display: none;
+	}
+
 	a:visited {
 		color: black;	
 	}
