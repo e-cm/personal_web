@@ -104,7 +104,7 @@
 	#trim-top, #trim-bottom {
 		position: fixed;
 		z-index: 100;
-		left: 15px;
+		left: var(--border-LR);
 		width: calc(100% - 30px);
 		height: var(--border-TB); 
 	}
@@ -244,6 +244,14 @@
 /* * * Max Size Styles * * */
 
 	@media screen and (min-width: 1200px) {
+	
+		#trim-top, #trim-bottom {
+			width: var(--canvas-maxwidth);
+		}
+
+		:root {
+			--border-LR: calc((100% - var(--canvas-maxwidth)) / 2);
+		}
 
 		#inner-border {
 			width: 1200px;

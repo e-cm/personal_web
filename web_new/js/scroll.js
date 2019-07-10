@@ -33,7 +33,12 @@ function setBarSize(element) {
 	let barSize;
 
 	scrollPercentage = element.scrollTop / (element.scrollHeight - element.clientHeight);
-	barSize = scrollPercentage * (window.innerWidth / 2 - 40);
+	
+	if (window.innerWidth < 1200) {
+		barSize = scrollPercentage * (window.innerWidth / 2 - 40);
+	} else {
+		barSize = scrollPercentage * 575;
+	}
 
 	switch (element) {
 		case document.getElementById('description'):
