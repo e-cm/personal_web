@@ -29,8 +29,8 @@ function init() {
 		});
 
 		proj_links[i].addEventListener('mouseenter', function(e){
-			proj_links[i].children[0].style.display = 'none';
 			proj_links[i].children[1].style.display = 'block';
+			proj_links[i].children[0].style.display = 'none';
 		});
 
 		proj_links[i].addEventListener('mouseleave', function(e){
@@ -38,6 +38,7 @@ function init() {
 			proj_links[i].children[1].style.display = 'none';
 		});
 	}
+
 }
 
 // Fade-out on page switch

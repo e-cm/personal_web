@@ -29,6 +29,28 @@
 		display: block;
 	}
 
+	#leftarrow, #rightarrow {
+		position: fixed;
+		display: block;
+		background-color: blue;
+		height: 50px;
+		width: 50px;
+  		bottom: 10%;
+
+    	-webkit-transition: 0.5s ease;
+  		transition: 0.5s ease;
+	}
+
+	#leftarrow {
+		left: calc(calc(100% - var(--border-LR) * 2) / 4 + var(--border-LR));
+    	transform: translate(-50%, 0);
+	}
+
+	#rightarrow {
+		right: calc(calc(100% - var(--border-LR) * 2) / 4 + var(--border-LR));
+    	transform: translate(50%, 0);
+	}
+
 	.videoWrapper {
 		position: relative;
 		height: 0;
@@ -145,6 +167,16 @@
 
 		#year {
 			font-size: 36px;
+		}
+
+		#leftarrow {
+			left: calc(292.5px + var(--border-LR)); /* 292.5 = max-width (1200) - borders (15*2) / 4 */
+    		transform: translate(-50%, 0);
+		}
+
+		#rightarrow {
+			right: calc(292.5px + var(--border-LR));
+    		transform: translate(50%, 0);
 		}
 
 	}

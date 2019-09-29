@@ -6,6 +6,28 @@
 		color: rgba(275,75,75,1);
 	}
 
+	#scrollpane {
+		position: fixed;
+		top: var(--border-TB);
+		right: var(--border-LR);
+		bottom: var(--border-TB);
+		left: var(--border-LR);
+	}
+
+	#centerarrow {
+		position: fixed;
+		display: block;
+		background-color: blue;
+		height: 50px;
+		width: 50px;
+  		bottom: 10%;
+  		left: 50%;
+    	transform: translate(-50%, 0);
+
+    	-webkit-transition: 0.5s ease;
+  		transition: 0.5s ease;
+	}
+
 	.project {
 		display: grid;
 		grid-template-columns: repeat(20, 1fr);
@@ -57,6 +79,10 @@
 
 		.year {
 			text-shadow: 0.6vw -0.8vw rgba(275,75,75,1);
+		}
+
+		#downarrow {
+			display: none;
 		}
 
 	}
