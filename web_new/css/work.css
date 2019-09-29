@@ -17,10 +17,9 @@
 	#centerarrow {
 		position: fixed;
 		display: block;
-		background-color: blue;
 		height: 50px;
 		width: 50px;
-  		bottom: 10%;
+  		bottom: 55px;
   		left: 50%;
     	transform: translate(-50%, 0);
 

@@ -32,10 +32,9 @@
 	#leftarrow, #rightarrow {
 		position: fixed;
 		display: block;
-		background-color: blue;
 		height: 50px;
 		width: 50px;
-  		bottom: 10%;
+  		bottom: 55px;
 
     	-webkit-transition: 0.5s ease;
   		transition: 0.5s ease;
@@ -49,6 +48,10 @@
 	#rightarrow {
 		right: calc(calc(100% - var(--border-LR) * 2) / 4 + var(--border-LR));
     	transform: translate(50%, 0);
+	}
+
+	.arrow-left:before, .arrow-left:after {
+		background: black;
 	}
 
 	.videoWrapper {
@@ -98,6 +101,10 @@
 
 		#year {
 			font-size: 6vw;
+		}
+
+		#leftarrow, #rightarrow {
+			display: none;
 		}
 
 	}
